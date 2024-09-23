@@ -1,0 +1,16 @@
+services:
+  stock-verse-db:
+    image: postgres:latest
+    restart: always
+    container_name: stock-verse-postgres-container
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=stockverse
+      - POSTGRES_PASSWORD=stockverse
+      - POSTGRES_DB=postgres
+    volumes:
+      - postgres:/data/postgres
+
+volumes:
+  postgres:
