@@ -2,11 +2,11 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
       <div className="h-screen  bg-gradient-to-tr from-customBlue via-black to-customDarkBlue">
         <div className="flex px-36 py-4 justify-between items-center">
           <div className="flex gap-2 items-center">
@@ -22,7 +22,10 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <Button className="rounded-full font-bold h-12 w-44 text-white bg-customBlue hover:bg-blue-800 transition-all shadow-lg">
+            <Button
+              className="rounded-full font-bold h-12 w-44 text-white bg-customBlue hover:bg-blue-800 transition-all shadow-lg"
+              onClick={() => signIn()}
+            >
               Login/Register
             </Button>
           </div>

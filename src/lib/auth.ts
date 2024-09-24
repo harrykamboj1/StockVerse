@@ -25,6 +25,9 @@ export const authConfig = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
+  pages: {
+    signIn: "/signin",
+  },
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
