@@ -46,6 +46,9 @@ const config: Config = {
         customDarkBlue: {
           DEFAULT: "#423270",
         },
+        customDarkPurpleShade: {
+          DEFAULT: "#03001C",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

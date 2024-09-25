@@ -30,6 +30,7 @@ export const authConfig = {
   },
   callbacks: {
     async jwt({ token, user }) {
+      console.log(user);
       if (user) {
         token.id = user.id;
       } else {
@@ -63,6 +64,10 @@ export const authConfig = {
       }
 
       return session;
+    },
+
+    async redirect() {
+      return "/explore";
     },
   },
 } satisfies AuthOptions;

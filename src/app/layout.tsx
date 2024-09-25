@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <AuthSessionProvider>
-          <NextTopLoader color="#3059ed" />
+          <NextTopLoader />
           {children}
         </AuthSessionProvider>
       </body>

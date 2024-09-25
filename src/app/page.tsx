@@ -43,7 +43,10 @@ export default function Home() {
           <p className="text-2xl text-gray-200 mb-8">
             Next Generation Platform for Stocks and Trading
           </p>
-          <Button className="rounded-full font-bold h-14 w-48 text-white bg-customBlue hover:bg-blue-800 transition-all shadow-lg">
+          <Button
+            onClick={() => signIn()}
+            className="rounded-full font-bold h-14 w-48 text-white bg-customBlue hover:bg-blue-800 transition-all shadow-lg"
+          >
             Get Started
           </Button>
         </motion.div>

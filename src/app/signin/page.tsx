@@ -29,11 +29,11 @@ const SignIn = () => {
         <Image
           src="/logo.png"
           alt="logo"
-          width={100}
-          height={100}
+          width={90}
+          height={90}
           className="rounded-full"
         />
-        <h1 className="text-5xl font-bold text-white drop-shadow-lg">
+        <h1 className="text-5xl font-bold text-white drop-shadow-lg ">
           StockVerse
         </h1>
       </div>
@@ -49,7 +49,7 @@ const SignIn = () => {
         <CardContent className="mt-6 flex flex-col items-center">
           <Button
             onClick={handleSubmit}
-            className="flex items-center gap-3 h-16 w-64 bg-white rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-xl ease-in-out duration-300"
+            className="flex items-center gap-3 h-16 w-64 bg-white rounded-lg shadow-lg transform transition-all  hover:shadow-xl ease-in-out duration-300"
           >
             <FcGoogle className="h-10 w-10" />
             <span className="text-xl font-semibold text-gray-700">
