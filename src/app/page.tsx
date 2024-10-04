@@ -9,7 +9,12 @@ export default function Home() {
     <>
       <div className="h-screen  bg-gradient-to-tr from-customBlue via-black to-customDarkBlue">
         <div className="flex px-36 py-4 justify-between items-center">
-          <div className="flex gap-2 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="flex gap-2 items-center"
+          >
             <Image
               src="/logo.png"
               width={60}
@@ -20,15 +25,19 @@ export default function Home() {
             <p className="font-bold text-2xl dark:text-white text-black">
               STOCKVERSE
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <Button
               className="rounded-full font-bold h-12 w-44 text-white bg-customBlue hover:bg-blue-800 transition-all shadow-lg"
               onClick={() => signIn()}
             >
               Login/Register
             </Button>
-          </div>
+          </motion.div>
         </div>
 
         <motion.div

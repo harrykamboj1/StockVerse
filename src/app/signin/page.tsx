@@ -2,6 +2,8 @@
 import React from "react";
 import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
+import { motion } from "framer-motion";
+
 import {
   Card,
   CardContent,
@@ -24,8 +26,13 @@ const SignIn = () => {
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-tr from-[#160F30] via-[#160F30] to-[#160F30]">
-      <div className="flex items-center gap-3 p-8">
+    <motion.div
+      initial={{ opacity: 0, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="h-screen flex flex-col items-center justify-center bg-gradient-to-tr from-[#160F30] via-[#160F30] to-[#160F30]"
+    >
+      <motion.div className="flex items-center gap-3 p-8">
         <Image
           src="/logo.png"
           alt="logo"
@@ -36,7 +43,7 @@ const SignIn = () => {
         <h1 className="text-5xl font-bold text-white drop-shadow-lg ">
           StockVerse
         </h1>
-      </div>
+      </motion.div>
       <Card className="w-max border-x-customBlue border-y-customBlue border-spacing-14 border-2 mt-8 rounded-xl shadow-2xl bg-[#301E67]  transform transition-transform  hover:shadow-2xl  ease-in-out duration-300">
         <CardHeader>
           <CardTitle className="text-4xl font-semibold text-white text-center tracking-wider">
@@ -63,7 +70,7 @@ const SignIn = () => {
           </p>
         </CardFooter>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

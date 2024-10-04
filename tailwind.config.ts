@@ -49,6 +49,12 @@ const config: Config = {
         customDarkPurpleShade: {
           DEFAULT: "#03001C",
         },
+        profit: {
+          DEFAULT: "#0ABB93",
+        },
+        loss: {
+          DEFAULT: "#D55538",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
